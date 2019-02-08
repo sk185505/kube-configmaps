@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: sm185402/test-httpd
+        image: sm185402/test-httpd:v1
         ports:
         - containerPort: 80
 ...
