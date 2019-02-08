@@ -24,7 +24,7 @@ spec:
         - name: welcome
           valueFrom:
             configMapKeyRef:
-              name: special-config
+              name: httpd-config
               key: special.how
 ...
 ---
