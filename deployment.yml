@@ -25,7 +25,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: httpd-config
-              key: special.how
+              key: welcome
 ...
 ---
 kind: Service
