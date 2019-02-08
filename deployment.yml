@@ -20,6 +20,12 @@ spec:
         image: sm185402/test-httpd:v1
         ports:
         - containerPort: 80
+        env:
+        - name: welcome
+          valueFrom:
+            configMapKeyRef:
+              name: special-config
+              key: special.how
 ...
 ---
 kind: Service
