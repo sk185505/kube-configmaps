@@ -25,10 +25,12 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: my-service
+  name: httpd-service
 spec:
+  selector:
+    app: httpd-test
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 9376
+    targetPort: 80
 ...
