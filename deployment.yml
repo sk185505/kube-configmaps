@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,3 +20,15 @@ spec:
         image: sm185402/test-httpd
         ports:
         - containerPort: 80
+...
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-service
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+...
